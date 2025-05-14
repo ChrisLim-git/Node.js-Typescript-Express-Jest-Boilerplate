@@ -72,39 +72,37 @@ project/
 Below is a typical flow of how a request moves through the main layers of the project:
 
 ```
-            Client (HTTP Request)
-                    │
-                    ▼
+                ## Client ##
+      (HTTP Request)      (HTTP Response)
+           │                     ▲
+           ▼                     │
       ┌─────────────────────────────┐
       │        Express App          │
       │        (src/app.ts)         │
       └─────────────────────────────┘
-                    │
-                    ▼
+           │                     ▲
+           ▼                     │
       ┌─────────────────────────────┐
       │        Controller           │
       │   (src/controllers/)        │
       └─────────────────────────────┘
-                    │
-                    ▼
+           │                     ▲
+           ▼                     │
       ┌─────────────────────────────┐
       │         Service             │
       │    (src/services/)          │
       └─────────────────────────────┘
-                    │
-                    ▼
+           │                     ▲
+           ▼                     │
       ┌─────────────────────────────┐
       │        Repository           │
       │   (src/repositories/)       │
       └─────────────────────────────┘
-                    │
-                    ▼
+           │                     ▲
+           ▼                     │
       ┌─────────────────────────────┐
       │      In-Memory Data         │
-      └─────────────────────────────┘
-                    │
-                    ▼
-            Client (HTTP Response)
+      └─────────────────────────────┘            
 ```
 
 - **app.ts**: Entry point, sets up Express and routes.
