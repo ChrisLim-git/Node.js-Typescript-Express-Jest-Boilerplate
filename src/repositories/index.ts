@@ -1,0 +1,1 @@
+export { customerRepo } from './customerRepo'
