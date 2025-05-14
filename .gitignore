@@ -1,0 +1,24 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+/.pnpm-store
+.pnp.js
+/.pnpm-store
+
+yarn.lock
+pnpm-lock.yaml
+package-lock.json
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# tsbuildinfo
+tsconfig.tsbuildinfo
+
+# test coverage
+/coverage
